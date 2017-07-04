@@ -1,0 +1,35 @@
+FindIntent  find {TLE|Item}
+FindIntent find {egg and bacon|Item}
+FindIntent find {chees bacon and bacon|Item}
+FindIntent find {goat cheese|Item}
+FindIntent find {goat cheese and bacon potato chips|Item}
+RestartIntent restart
+RestartIntent start again
+RestartIntent startover
+LastIngredient last ingredient
+LastIngredient previous ingredient
+AMAZON.StopIntent main menu
+StartIngredient ingredient
+StartIngredient read ingredient
+StartIngredient what are the ingredients
+StartDirection read recipe
+StartDirection start
+StartDirection what are the steps
+AdvanceDirection next step
+AdvanceDirection what do i do next
+AdvanceDirection what is the next step
+
+LastDirection last step
+LastDirection what is the last step
+LastDirection what is the last step again
+LastDirection previous step
+
+AdvanceIngredient next ingredient
+AdvanceIngredient what is the next ingredient
+
+
+AMAZON.HelpIntent what can i say
+AMAZON.HelpIntent what should i say
+AMAZON.HelpIntent what can i say next
+AMAZON.HelpIntent what to do next
+AMAZON.HelpIntent what do i need to do

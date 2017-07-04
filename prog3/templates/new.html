@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block body %}
+<div class="content" style="text-align: center;">
+  <div class="title">Add a New Recipe</div>
+  <form id="new-recipe" action="/recipes/new" method="post">
+    <div class="section">Title</div><br><input name="RecipeName" value="Text box for title" style="width: 50%;"><br>
+    <br>
+    <div class="section">Ingredients</div><br><textarea name="Ingredients" form="new-recipe">Text box for ingredients (one per line)</textarea><br>
+    <br>
+    <div class="section">Directions</div><br><textarea name="Directions" form="new-recipe">Text box for preparation steps (one per line)</textarea><br>
+    <br>
+    <div class="section">Image</div><br><input name="dummy" type="file" accept="image/*"><br> or an image url: <input name="Image" value="http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-image-missing-icon.png" style="width: 15em;"><br>
+    <br>
+    <input type="submit">
+  </form>
+</div>
+{% endblock %}

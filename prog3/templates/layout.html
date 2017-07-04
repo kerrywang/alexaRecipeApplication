@@ -1,0 +1,38 @@
+<!doctype html>
+
+<head>
+  <link rel="shortcut icon" href="/static/icon.jpg" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Slabo+27px" rel="stylesheet">
+  <link href="/static/style.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<title>Recipe Assistant</title>
+{% with messages = get_flashed_messages() %} {% if messages %}
+<ul class=flashes>
+  {% for message in messages %}
+  <li>{{ message }}</li>
+  {% endfor %}
+</ul>
+{% endif %} {% endwith %}
+<div class="menu">
+  <ul>
+    <li>
+      <a href="/recipes" class="menu-image"><img src="/static/icon.jpg" class="menu-image"></a>
+    </li>
+    <li><a href="/recipes"><text>Recipe Assistant</text></a></li>
+    <li><a href="/recipes#recipe-list">Find Recipes</a></li>
+    <li><a href="/recipes/new">Create New Recipe</a></li>
+
+    <li style="float: right;">
+      <a href="/settings" class="menu-image"><img src="/static/settings.png" class="menu-image"></a>
+    </li>
+    <li style="float: right;">
+      <text style="margin-top: -2px; line-height: 2em;">
+        <form onsubmit="window.location.href = '/recipes/search'; return false;">
+          <input value="" placeholder="Search Recipes or Ingredients" style="width: 15em;">
+        </form>
+      </text>
+    </li>
+  </ul>
+</div>
+{% block body %} {% endblock %}

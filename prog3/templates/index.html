@@ -1,0 +1,43 @@
+{% extends "layout.html" %} {% block body %}
+<div class="content">
+  <p class="title" id="recipe-list">Recipes</p>
+
+  <recipe-list>
+    {% for recipe_group in recipe_groups %} {% for recipe in recipe_group %} {% if recipe %}
+    <responsive>
+      <recipe>
+        <a href="/recipes/{{ recipe.RecipeName }}">
+          <div class="recipe-item-name">{{ recipe.RecipeName }}</div>
+        </a>
+        <a href="/recipes/{{ recipe.RecipeName }}">
+          <img src="{{ recipe.ImageSRC }}" class="recipe-item-image">
+        </a>
+        <div class="recipe-item-ingredients">
+          <a href="/recipes/{{ recipe.RecipeName }}#ingredients">
+            <img src="https://cdn0.iconfinder.com/data/icons/shopping-41/70/groceries-512.png">
+          </a>
+        </div>
+        <div class="shortcut-link">
+          <a class="shortcut-link" href="/recipes/{{ recipe.RecipeName }}#ingredients">
+            Ingredients List
+          </a>
+        </div>
+        <br>
+        <div class="recipe-item-directions">
+          <a href="/recipes/{{ recipe.RecipeName }}#directions">
+            <img src="https://cdn0.iconfinder.com/data/icons/kitchen-and-cooking/512/salting_cooking_hand_sprinkle_salt_flat_design_icon-512.png">
+          </a>
+        </div>
+        <div class="shortcut-link">
+          <a class="shortcut-link" href="/recipes/{{ recipe.RecipeName }}#directions">
+            Preparation Directions
+          </a>
+        </div>
+      </recipe>
+    </responsive>
+    {% endif %} {% endfor %}
+    <div class="clearfix"></div>
+    {% endfor %}
+  </recipe-list>
+</div>
+{% endblock %}

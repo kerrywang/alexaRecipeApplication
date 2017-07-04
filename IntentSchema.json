@@ -1,0 +1,49 @@
+{
+  "intents": [
+    {
+      "intent": "FindIntent",
+      "slots": [
+        {
+          "name": "Item",
+          "type": "AMAZON.LITERAL"
+        }
+      ]
+    },
+    {
+      "intent": "RestartIntent"
+    },
+    {
+      "intent": "AMAZON.YesIntent"
+    },
+    {
+      "intent": "AMAZON.NoIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "LastIngredient"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "StartIngredient"
+    },
+    {
+      "intent": "StartDirection"
+    },
+    {
+      "intent": "AdvanceDirection"
+    },
+    {
+      "intent": "LastDirection"
+    },
+    {
+      "intent": "AdvanceIngredient"
+    }
+  ]
+}
